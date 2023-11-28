@@ -27,13 +27,3 @@ const getNameColour = name => {
     }
     return vals[mod(getValue(name), 8)] 
 }
-
-document.getElementById("check").addEventListener("click", () => {
-    const rgb = getNameColour(document.getElementById("input").value)
-    const col = document.createElement("div")
-    col.style.background = `rgb(${rgb})`
-    col.className = "colour"
-    
-    document.getElementById("output").innerHTML = rgb
-    document.getElementById("output").prepend(col)
-})
